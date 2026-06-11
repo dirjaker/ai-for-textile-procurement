@@ -600,7 +600,265 @@ codex "创建供应商评估系统 supplier_eval.py：
 
 ---
 
-## 八、常见问题解决
+## 八、Codex 插件与 Skill（扩展能力）
+
+### 8.1 什么是 Skill？
+
+**Skill** 是预定义的知识和技能模块，可以增强 Codex 在特定领域的能力。
+
+**类比：**
+- Codex 本身 = 一个聪明的通才
+- 加载 Skill = 让它成为某个领域的专家
+
+**示例：**
+- 加载 "采购分析" Skill → Codex 变成采购分析专家
+- 加载 "数据分析" Skill → Codex 变成数据分析师
+- 加载 "合同审查" Skill → Codex 变成法务专家
+
+### 8.2 常用 Skill 推荐
+
+#### 数据分析类
+
+| Skill 名称 | 功能 | 适用场景 |
+|------------|------|---------|
+| **pandas-master** | 高级数据处理 | Excel 分析、数据清洗 |
+| **visualization** | 数据可视化 | 生成图表、仪表板 |
+| **statistical-analysis** | 统计分析 | 趋势分析、预测 |
+
+#### 文档处理类
+
+| Skill 名称 | 功能 | 适用场景 |
+|------------|------|---------|
+| **contract-analyzer** | 合同分析 | 条款提取、风险识别 |
+| **report-generator** | 报告生成 | 月报、年报 |
+| **email-writer** | 邮件撰写 | 询价、催货、沟通 |
+
+#### 采购专业类
+
+| Skill 名称 | 功能 | 适用场景 |
+|------------|------|---------|
+| **supplier-evaluation** | 供应商评估 | 综合评分、分级 |
+| **price-analysis** | 价格分析 | 成本对比、趋势 |
+| **textile-expert** | 纺织专家 | 坯布知识、行业规范 |
+
+### 8.3 如何使用 Skill
+
+**方式一：在对话中声明**
+
+```bash
+# 启动 Codex 时加载 Skill
+codex "请使用 supplier-evaluation skill 分析 supplier_data.xlsx"
+
+# 或者在对话中声明
+codex
+> 请使用 textile-expert skill 解释什么是精梳棉
+```
+
+**方式二：通过配置文件**
+
+创建 `~/.codex/skills.yaml`：
+```yaml
+default_skills:
+  - textile-expert
+  - supplier-evaluation
+
+skills:
+  textile-expert:
+    description: "纺织行业专业知识"
+    includes:
+      - 纤维材料知识
+      - 织造工艺
+      - 质量标准
+      - 行业术语
+  
+  supplier-evaluation:
+    description: "供应商评估框架"
+    includes:
+      - 评估维度（质量、价格、交期、服务）
+      - 评分标准
+      - 分级规则
+      - 报告模板
+```
+
+**方式三：创建自定义 Skill**
+
+```bash
+# 创建采购专家 Skill
+codex "创建一个采购专家 skill，包含：
+1. 坯布专业知识（纱支、密度、织造）
+2. 供应商评估标准
+3. 质量检验规范
+4. 成本分析框架
+5. 行业常用术语
+
+保存为 textile-procurement-expert.md"
+```
+
+### 8.4 Skill 实战示例
+
+#### 示例一：创建采购分析 Skill
+
+```bash
+codex "创建一个采购数据分析 skill，要求：
+1. 数据标准化：自动识别日期、金额、数量等字段
+2. 分析框架：
+   - 按时间：月度、季度、年度趋势
+   - 按品类：品类占比、增长情况
+   - 按供应商：供应商集中度、依赖度
+3. 可视化模板：
+   - 趋势图（折线图）
+   - 占比图（饼图）
+   - 排名图（柱状图）
+4. 报告格式：
+   - 概述
+   - 数据分析
+   - 发现和洞察
+   - 建议
+
+保存为 procurement-analysis-skill.md"
+```
+
+#### 示例二：使用 Skill 分析数据
+
+```bash
+# 加载 Skill 后，分析变得更专业
+codex "使用 procurement-analysis-skill 分析 purchase_2024.xlsx
+
+请按照 skill 中的分析框架：
+1. 数据标准化处理
+2. 时间维度分析
+3. 品类维度分析
+4. 供应商维度分析
+5. 生成符合 skill 格式的报告"
+```
+
+### 8.5 推荐的 Skill 组合
+
+#### 采购经理日常组合
+
+```yaml
+daily_skills:
+  - textile-expert          # 纺织专业知识
+  - email-writer            # 邮件撰写
+  - report-generator        # 报告生成
+  - data-analysis           # 数据分析
+```
+
+#### 供应商管理组合
+
+```yaml
+supplier_management:
+  - supplier-evaluation     # 供应商评估
+  - contract-analyzer       # 合同分析
+  - risk-assessment         # 风险评估
+  - textile-expert          # 行业知识
+```
+
+#### 数据分析组合
+
+```yaml
+data_analysis:
+  - pandas-master           # 数据处理
+  - statistical-analysis    # 统计分析
+  - visualization           # 可视化
+  - procurement-analysis    # 采购分析框架
+```
+
+### 8.6 插件系统
+
+#### 什么是插件？
+
+**插件** 是可以扩展 Codex 功能的外部工具。
+
+**常见插件类型：**
+- 文件处理插件（Excel、PDF、Word）
+- 数据库连接插件（MySQL、PostgreSQL）
+- API 调用插件（天气、汇率、股票）
+- 通知插件（邮件、短信、微信）
+
+#### 推荐插件
+
+| 插件名称 | 功能 | 采购场景 |
+|---------|------|---------|
+| **excel-plugin** | 高级 Excel 操作 | 处理复杂的采购表格 |
+| **pdf-reader** | PDF 解析 | 读取合同、发票 |
+| **email-sender** | 发送邮件 | 批量发送询价单 |
+| **weather-api** | 天气查询 | 了解对物流的影响 |
+| **currency-converter** | 汇率转换 | 外贸采购计算 |
+
+#### 安装插件
+
+```bash
+# 安装 Excel 插件
+codex plugin install excel-plugin
+
+# 安装 PDF 读取插件
+codex plugin install pdf-reader
+
+# 查看已安装插件
+codex plugin list
+```
+
+#### 使用插件示例
+
+```bash
+# 使用 Excel 插件处理数据
+codex "使用 excel-plugin 打开 suppliers.xlsx
+1. 按价格排序
+2. 标记价格高于平均水平的供应商
+3. 保存为 suppliers_ranked.xlsx"
+
+# 使用 PDF 插件读取合同
+codex "使用 pdf-reader 读取 contract.pdf
+提取所有关键条款并整理成表格"
+```
+
+### 8.7 构建自己的工具链
+
+#### 采购工作流自动化
+
+```bash
+# 创建自动化脚本
+codex "创建一个采购工作流自动化脚本 workflow.py：
+
+功能：
+1. 每天早上 9 点自动运行
+2. 读取 ERP 系统的采购订单
+3. 检查订单状态
+4. 生成异常报告
+5. 发送到采购团队邮箱
+
+技术要求：
+- 使用 schedule 库定时
+- 使用 smtplib 发送邮件
+- 使用 pandas 处理数据
+- 日志记录运行状态"
+```
+
+#### 供应商信息自动收集
+
+```bash
+# 创建供应商信息收集器
+codex "创建供应商信息收集器 supplier_collector.py：
+
+功能：
+1. 输入供应商名单
+2. 自动从公开渠道收集信息：
+   - 工商信息
+   - 新闻报道
+   - 行业评价
+3. 整理成标准格式
+4. 生成供应商档案
+
+数据源：
+- 天眼查/企查查（需 API）
+- 百度新闻搜索
+- 行业网站"
+```
+
+---
+
+## 九、常见问题解决
 
 ### 8.1 安装问题
 
