@@ -31,17 +31,17 @@ ai-for-textile-procurement/
 ├── README.md                              # 项目说明（本文件）
 │
 ├── docs/                                  # 知识文档
-│   ├── 01-what-is-ai.md                   # 第一章：什么是 AI
-│   ├── 02-what-is-llm.md                  # 第二章：什么是大语言模型
-│   ├── 03-what-is-agent.md                # 第三章：什么是 AI Agent
-│   ├── 04-ai-capabilities.md              # 第四章：AI 能力边界
-│   └── 05-codex-tutorial.md               # 第五章：Codex 使用教程
+│   ├── 01-什么是人工智能.md                # 第一章：什么是 AI
+│   ├── 02-什么是大语言模型.md              # 第二章：什么是大语言模型
+│   ├── 03-什么是AI-Agent.md               # 第三章：什么是 AI Agent
+│   ├── 04-AI能力边界.md                   # 第四章：AI 能力边界
+│   └── 05-Codex使用教程.md                # 第五章：Codex 使用教程
 │
 ├── interview/                             # 面试题库
-│   ├── 01-procurement-basics.md           # 采购专业知识面试题
-│   ├── 02-ai-knowledge.md                 # AI 知识面试题
-│   ├── 03-scenario-questions.md           # 情景模拟题
-│   └── 04-reference-answers.md            # 参考答案与面试技巧
+│   ├── 01-采购专业知识.md                  # 采购专业知识面试题
+│   ├── 02-AI知识面试题.md                 # AI 知识面试题
+│   ├── 03-情景模拟题.md                   # 情景模拟题
+│   └── 04-参考答案与面试技巧.md            # 参考答案与面试技巧
 │
 └── LICENSE                                # MIT 许可证
 ```
@@ -144,16 +144,16 @@ ai-for-textile-procurement/
 ### 路径一：学习 AI 基础知识
 
 ```
-1. 阅读 docs/01-what-is-ai.md（30 分钟）
-2. 阅读 docs/02-what-is-llm.md（40 分钟）
-3. 阅读 docs/03-what-is-agent.md（40 分钟）
-4. 阅读 docs/04-ai-capabilities.md（30 分钟）
+1. 阅读 docs/01-什么是人工智能.md（30 分钟）
+2. 阅读 docs/02-什么是大语言模型.md（40 分钟）
+3. 阅读 docs/03-什么是AI-Agent.md（40 分钟）
+4. 阅读 docs/04-AI能力边界.md（30 分钟）
 ```
 
 ### 路径二：学习 Codex 使用
 
 ```
-1. 阅读 docs/05-codex-tutorial.md
+1. 阅读 docs/05-Codex使用教程.md
 2. 按照教程安装 Codex
 3. 配置国产模型（推荐 DeepSeek）
 4. 尝试采购实战案例
@@ -162,10 +162,10 @@ ai-for-textile-procurement/
 ### 路径三：准备面试
 
 ```
-1. 复习 interview/01-procurement-basics.md
-2. 学习 interview/02-ai-knowledge.md
-3. 练习 interview/03-scenario-questions.md
-4. 参考 interview/04-reference-answers.md
+1. 复习 interview/01-采购专业知识.md
+2. 学习 interview/02-AI知识面试题.md
+3. 练习 interview/03-情景模拟题.md
+4. 参考 interview/04-参考答案与面试技巧.md
 ```
 
 ---
