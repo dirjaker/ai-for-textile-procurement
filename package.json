@@ -1,0 +1,11 @@
+{
+  "name": "ai-for-textile-procurement",
+  "version": "1.0.0",
+  "description": "专为纺织采购从业者设计的 AI 学习与实战指南",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "devDependencies": {}
+}
