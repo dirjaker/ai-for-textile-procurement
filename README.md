@@ -5,6 +5,10 @@
 [![VitePress](https://img.shields.io/badge/文档站点-VitePress-blue)](https://dirjaker.github.io/ai-for-textile-procurement)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+## 🔗 在线访问
+
+**👉 [点击打开文档站](https://dirjaker.github.io/ai-for-textile-procurement)** 👈
+
 ---
 
 ## 🎯 这是什么？
