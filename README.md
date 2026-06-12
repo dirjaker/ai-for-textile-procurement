@@ -69,7 +69,7 @@ ai-for-textile-procurement/
 #### 第二章：什么是大语言模型（LLM）？
 - LLM 的定义和工作原理
 - 主流大模型对比（含发展历程 + 最新推荐）
-  - 国际：GPT-4、Claude 3、Gemini、Llama 3
+  - 国际：GPT-5、Claude Fable 5、Gemini 3.1、Llama 4
   - 国产：DeepSeek、通义千问、文心一言、智谱清言、讯飞星火
 - 模型能力与局限性
 - 如何选择适合的模型
