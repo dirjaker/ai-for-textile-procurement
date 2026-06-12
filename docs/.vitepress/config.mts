@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  base: '/ai-for-textile-procurement/',
   title: 'AI 纺织采购指南',
   description: '专为纺织采购从业者设计的 AI 学习与实战指南',
   lang: 'zh-CN',
