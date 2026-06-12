@@ -1,0 +1,18 @@
+/* 表格响应式：手机端可横向滚动 */
+.vp-doc table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 手机端优化 */
+@media (max-width: 768px) {
+  .vp-doc table {
+    font-size: 13px;
+  }
+  .vp-doc table th,
+  .vp-doc table td {
+    padding: 6px 8px;
+    white-space: nowrap;
+  }
+}
